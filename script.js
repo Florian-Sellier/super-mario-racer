@@ -28,9 +28,3 @@ document.ready(georgie());
 function georgie() {
   tempsretourne = setTimeout(retourne, tempsAle);
 }
-
-function retourne() {
-	alert("TESST");
-	console.log (tempsAle);
-	georgie();
-}
