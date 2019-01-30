@@ -1,0 +1,17 @@
+#joueur1{
+position:absolute;
+width:100px;
+height:100px;
+left:20px;
+top:15%;
+background-color: aqua;
+}
+
+#joueur2{
+position:absolute;
+width:100px;
+height:100px;
+left:20px;
+top:60%;
+background-color: blueviolet;
+}
