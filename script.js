@@ -1,21 +1,35 @@
-var tempsretourne;
-var tempsAle;
+var tempsretourne1;
+var tempsAle1 = Math.floor(Math.random() * 5000) + 1000;
 
-function RandomNumber(){
-var tempsAle = Math.floor(Math.random() * 5000) + 1000;
-return tempsAle;    
-};
+var tempsretourne2;
+var tempsAle2 = Math.floor(Math.random() * 2000) + 1000;
 
-console.log (tempsAle);
 
-document.ready(georgie());
+var divGeorgie = document.getElementById( 'georgie' );
+divGeorgie.style.backgroundColor = 'green';
 
-function georgie() {
-  tempsretourne = setTimeout(retourne, tempsAle);
+console.log (tempsAle1);
+
+document.ready(georgie1());
+
+function georgie1() {
+  tempsretourne1 = setTimeout(retourne1, tempsAle1);
 }
 
-function retourne() {
-	alert("TESST");
-	console.log (tempsAle);
-	georgie();
+function georgie2() {
+  tempsretourne2 = setTimeout(retourne2, tempsAle2);
+}
+
+function retourne1() {
+	var tempsAle1 = Math.floor(Math.random() * 5000) + 1000;
+	console.log (tempsAle1);
+	divGeorgie.style.backgroundColor = 'green';
+	georgie2();
+}
+
+function retourne2() {
+	var tempsAle2 = Math.floor(Math.random() * 5000) + 1000;
+	console.log (tempsAle2);
+	divGeorgie.style.backgroundColor = 'red';
+	georgie1();
 }
