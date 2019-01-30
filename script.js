@@ -1,5 +1,4 @@
 var joueur1, joueur2;
-
 window.addEventListener("load",initialisation, false);
 function initialisation() {
     joueur1 = document.getElementById("joueur1");
@@ -13,18 +12,29 @@ function changeBGImage(Image){
     document.body.style.backgroundImage = "url('IMG/"+Image+"')";
     }
 }
-var tempsretourne;
-var tempsAle;
 
-function RandomNumber(){
-var tempsAle = Math.floor(Math.random() * 5000) + 1000;
-return tempsAle;    
-};
 
-console.log (tempsAle);
+var tempsretourne2;
+var tempsAle2 = Math.floor(Math.random() * 2000) + 1000;
 
-document.ready(georgie());
 
-function georgie() {
-  tempsretourne = setTimeout(retourne, tempsAle);
+var divGeorgie = document.getElementById( 'georgie' );
+divGeorgie.style.backgroundColor = 'green';
+
+
+document.ready(georgie1());
+
+function georgie1() {
+  tempsretourne1 = setTimeout(retourne1, tempsAle1);
+}
+
+function georgie2() {
+  tempsretourne2 = setTimeout(retourne2, tempsAle2);
+}
+
+function retourne1() {
+	var tempsAle1 = Math.floor(Math.random() * 5000) + 1000;
+	console.log (tempsAle1);
+	divGeorgie.style.backgroundColor = 'green';
+	georgie2();
 }
