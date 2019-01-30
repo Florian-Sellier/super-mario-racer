@@ -1,5 +1,9 @@
 var tempsretourne1;
 var tempsAle1 = Math.floor(Math.random() * 5000) + 1000;
+var joueur1, joueur2;
+
+var tempsretourne;
+var tempsAle;
 
 var tempsretourne2;
 var tempsAle2 = Math.floor(Math.random() * 2000) + 1000;
@@ -25,11 +29,4 @@ function retourne1() {
 	console.log (tempsAle1);
 	divGeorgie.style.backgroundColor = 'green';
 	georgie2();
-}
-
-function retourne2() {
-	var tempsAle2 = Math.floor(Math.random() * 5000) + 1000;
-	console.log (tempsAle2);
-	divGeorgie.style.backgroundColor = 'red';
-	georgie1();
 }
