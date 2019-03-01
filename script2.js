@@ -1,70 +1,35 @@
 window.addEventListener("keydown", affiche, false);
+window.addEventListener("keyup", mvt, false);
 
 function affiche(evenement)
         {
 			var mouvJ1=true;
-			var pos1=joueur1.style.right;
+			var pos1=joueur1.style.left;
 			
             gauche=joueur1.offsetLeft;
             haut=joueur1.offsetTop;
-            if(evenement.key=="q")
+            
+            if(evenement.key=="d")
                 {
-                    joueur1.style.left=gauche-Math.random() * (10) + 1+"px";
-					console.log(georgieRet);
-					if(georgieRet==true){
-						joueur1.style.left="20px";
-					}
-                }
-            else if(evenement.key=="d")
-                {
-                    joueur1.style.left=gauche+Math.random() * (10) + 1+"px";
+                    joueur1.style.left=gauche+Math.random() * (20) + 1+"px";
 					console.log(pos1);
+					joueur1.style.backgroundColor="yellow";
 					if(georgieRet==true){
 						joueur1.style.left="20px";
 					}
                 }
-             else if(evenement.key=="z")
+			if(evenement.onkeyup=="d")
                 {
-                    joueur1.style.top=haut-Math.random() * (10) + 1+"px";	
-					if(georgieRet==true){
-						joueur1.style.left="20px";
-					}
-                }
-            else if(evenement.key=="s")
-                {
-                    joueur1.style.top=haut+Math.random() * (10) + 1+"px";
-					if(georgieRet==true){
-						joueur1.style.left="20px";
-					}
-			
+					joueur1.style.backgroundColor="cyan";
                 }
 			
 			gauche2=joueur2.offsetLeft;
             haut2=joueur2.offsetTop;
-            if(evenement.code=="ArrowLeft")
+
+            if(evenement.code=="ArrowRight")
                 {
-                    joueur2.style.left=gauche2-(Math.random()*(10)+1)+"px";
-					if(georgieRet==true){
-						joueur2.style.left="20px";
-					}
-                }
-            else if(evenement.code=="ArrowRight")
-                {
-                    joueur2.style.left=gauche2+(Math.random() * (10) + 1)+"px";
-					if(georgieRet==true){
-						joueur2.style.left="20px";
-					}
-                }
-             else if(evenement.code=="ArrowUp")
-                {
-                    joueur2.style.top=haut2-Math.random() * (10) + 1+"px";
-					if(georgieRet==true){
-						joueur2.style.left="20px";
-					}
-                }
-            else if(evenement.code=="ArrowDown")
-                {
-                    joueur2.style.top=haut2+Math.random() * (10) + 1+"px";
+                    joueur2.style.left=gauche2+(Math.random() * (20) + 1)+"px";
+					joueur2.style.backgroundColor="yellow";
 					if(georgieRet==true){
 						joueur2.style.left="20px";
 					}
@@ -74,7 +39,14 @@ function affiche(evenement)
 			
 		}
 
-function test(evenement) {
-        }
+function mvt(evenement) {
+	if(evenement.key=="d")
+		joueur1.style.backgroundColor="cyan";
+	
+	if(evenement.code=="ArrowRight")
+		joueur2.style.backgroundColor="purple";
+	}
+                
+        
 
 
